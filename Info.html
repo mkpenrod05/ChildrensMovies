@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="Cache-control" content="public" />
+<title> Children's Movies </title>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="cm_style.css" type="text/css" />
+<link rel="stylesheet" href="jQuery/jquery-ui-1.8.16.custom.css" type="text/css" /> 
+
+<script src="querystring.js" type="text/javascript"></script>
+<script src="movie_list.js" type="text/javascript"></script>
+<script src="list_types.js" type="text/javascript"></script>
+<script src="search.js" type="text/javascript"></script>
+<script src="jQuery/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="jQuery/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "blind",
+			modal: true,
+			width: 450
+		});
+
+		$( "#opener" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+	});
+	
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1;
+	$(function() {
+		$( "#dialog-0").dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "blind",
+			modal: true,
+			width: 380
+		});
+
+		$( "#opener-0").click(function() {
+			$( "#dialog-0").dialog( "open" );
+			return false;
+		});
+		
+		
+	});
+	
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1;
+	$(function() {
+		$( "#dialog-1" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "blind",
+			modal: true,
+			width: 380
+		});
+
+		$( "#opener-1" ).click(function() {
+			$( "#dialog-1" ).dialog( "open" );
+			return false;
+		});
+		
+		
+	});
+	
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1;
+	$(function() {
+		$( "#dialog-2" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "blind",
+			modal: true,
+			width: 380
+		});
+
+		$( "#opener-2" ).click(function() {
+			$( "#dialog-2" ).dialog( "open" );
+			return false;
+		});
+		
+		
+	});
+	
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1;
+	$(function() {
+		$( "#dialog-3" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "blind",
+			modal: true,
+			width: 380
+		});
+
+		$( "#opener-3" ).click(function() {
+			$( "#dialog-3" ).dialog( "open" );
+			return false;
+		});
+		
+		
+	});
+	
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1;
+	$(function() {
+		$( "#dialog-4" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "blind",
+			modal: true,
+			width: 380
+		});
+
+		$( "#opener-4" ).click(function() {
+			$( "#dialog-4" ).dialog( "open" );
+			return false;
+		});
+		
+		
+	});
+	
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1;
+	$(function() {
+		$( "#dialog-5" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "blind",
+			modal: true,
+			width: 380
+		});
+
+		$( "#opener-5" ).click(function() {
+			$( "#dialog-5" ).dialog( "open" );
+			return false;
+		});
+		
+		
+	});
+//]]>
+</script>
+
+</head>
+
+<!--HEADER & NAV START-->
+<body>
+<div id="container">
+<div id="header">
+<h1 class="header"> Children's Movies </h1>
+</div><!--header-->
+
+<div id="nav">
+<ul class="nav_link">
+<li><a class="nav_link_left" href="Index.html">Home</a></li>
+<li><a class="nav_link" href="Index.html?page_type=movie_list">Movie List</a></li>
+<li><a class="nav_link" href="New_Titles.html">New Titles</a></li>
+<li><a class="nav_link" href="About.html">About</a></li>
+</ul> 
+<form action="index.html">
+<input type="text" name="title_search" size="30" />
+<input type="submit" name="submit" value="Movies Search" />&nbsp;&nbsp;
+<input type="hidden" name="page_type" value="search_movie_titles" />
+</form>
+</div><!--nav-->
+
+<div id="clear"></div>
+<!--HEADER & NAV END-->
+
+<div class="info_right_nav">
+	<div class="nav_head">
+	New to DVD & Blu-Ray
+	</div>
+	<div style="padding:10px;">
+	<center><b style="color:#FF1800;text-shadow:#444444 1px 1px 1px;">Top 6</b></center>
+	<script type="text/javascript">
+	//<![CDATA[
+	new_dvd_bluray();
+	//]]>
+	</script>
+	</div>
+</div>
+
+<div style="padding: 20px; min-height: 600px;"><!--content start-->
+
+<script type="text/javascript">
+//<![CDATA[
+var i = get_query_string("title_view");
+
+document.write("<div class='info_image'>");
+document.write("<img style='border:1px solid #999999;' src='images/" + movie[i].image + "' title='" + movie[i].title + "' />");
+document.write("<p style='text-align:center;font-size:20px;'>");
+document.write("<a id='opener' class='info' href='#'>");
+document.write("<img style='border: none;' src='images/youtube.jpg' />");
+document.write("&nbsp;&nbsp;Watch Trailer</a></p></div>");
+
+//document.write("<a href='" + movie[i].trailer + "'>");
+//document.write("<img style='border: none;' src='images/youtube.jpg' /></a>");
+//document.write("<a class='info' href='" + movie[i].trailer + "'>&nbsp;&nbsp;Watch Trailer</a></p></div>");
+
+document.write("<div style='text-align:center; font-size: 30px;'>");
+document.write(movie[i].title + "&nbsp;&nbsp;");
+document.write("<span style='color: #BBBBBB;'>(" + movie[i].date + ")</span></div><br />");
+document.write("<div style='width:745px;'>");
+document.write("<span class='no_div'><b>&nbsp;" + movie[i].rating + "&nbsp;</b></span>&nbsp;&nbsp;");
+document.write("<span class='no_div'><b>&nbsp;" + movie[i].runtime + "&nbsp;</b></span>&nbsp;&nbsp;&nbsp;&nbsp;");
+document.write("-&nbsp;&nbsp;&nbsp;&nbsp;" + movie[i].genre + "<br />");
+
+document.write("<p><b>Director:</b>&nbsp;&nbsp;" + movie[i].director + "</p>");
+
+document.write("<p><b>Leading roles:</b>&nbsp;&nbsp;")
+document.write("<a class='info' href='" + movie[i].star1_link + "' target='_BLANK'>" + movie[i].star1 + "</a>, ");
+document.write("<a class='info' href='" + movie[i].star2_link + "' target='_BLANK'>" + movie[i].star2 + "</a>, and ");
+document.write("<a class='info' href='" + movie[i].star3_link + "' target='_BLANK'>" + movie[i].star3 + "</a>");
+document.write("</p>");
+
+
+document.write("<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + movie[i].storyline + "</p>");
+document.write("<p><b>Box Office Results:</b>&nbsp;&nbsp;" + movie[i].gross + "</p>");
+document.write("</div>");
+
+document.write("<div id='dialog' title='" + movie[i].title + "'>");
+document.write("<iframe width='420' height='315' src='" + movie[i].trailer + "' frameborder='0' allowfullscreen></iframe>");
+document.write("</div>");
+//]]>
+</script>
+
+
+
+</div><!--content end-->
+
+<!--FOOTER START-->
+<div id="footer">
+	<div class="inner_footer">
+	<table width="100%">
+		<tr>
+			<td>
+			&copy; 2012, <a href="index.html" class="orange_title">Children's Movies</a>
+			<br />
+			Developed by:&nbsp;&nbsp;Michael C. Penrod
+			</td>
+			<td>
+			<a href="index.html" class="info">Home</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="index.html?page_type=movie_list" class="info">Movie List</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="new_titles.html" class="info">New Titles</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="about.html" class="info">About</a>
+			</td>
+			<td align="right">
+			<a href="http://validator.w3.org/check?uri=referer">
+			<img style="border:none;" src="images/valid-xhtml10.png" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+			</a>
+			</td>
+		</tr>
+	</table>
+	</div><!--inner footer-->
+</div><!--footer-->
+<!--FOOTER END-->
+
+</div><!--#container-->
+
+
+<!--
+<div id="dialog" title="Basic dialog">
+	<iframe width="420" height="315" src="http://www.youtube.com/embed/KLIqErnQCuw" frameborder="0" allowfullscreen></iframe>
+</div>
+-->
+
+<!--<a href="#" id="opener">Try this</a>-->
+
+
+
+
+
+
+</body>
+</html>
